@@ -22,6 +22,9 @@ script:
 <%- if bc_partition.include? "pascalnodes" or bc_partition.include? "amperenodes" -%>
     - "--gres=gpu:<%= bc_num_gpus.blank? ? 1 : bc_num_gpus.to_i %>"
 <%- end -%>
+<%- if ! bc_nodelist.blank? -%>
+    - "--nodelist=<%= bc_nodelist %>"
+<%- end -%>
 <%- if bc_email_on_started == "1" -%>
     - "--mail-type=BEGIN"
     - "--mail-user=<%= email %>"

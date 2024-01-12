@@ -93,6 +93,10 @@ attributes:
       - [ "3.4.1-intel-2017a-X11-20170314", "R/3.4.1-intel-2017a-X11-20170314"]
       - [ "3.3.3-intel-2017a-X11-20170314", "R/3.3.3-intel-2017a-X11-20170314"]
 
+  bc_nodelist:
+    widget: text_field
+    label: Enter node list, comma separated
+
 form:
   - custom_environment
   - rstudio_version
@@ -102,4 +106,5 @@ form:
   - bc_num_gpus
   - bc_num_slots
   - bc_num_mems
+  - bc_nodelist
   - bc_email_on_started
